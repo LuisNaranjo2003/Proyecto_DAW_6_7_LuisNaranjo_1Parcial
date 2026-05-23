@@ -10,6 +10,7 @@ body {
     color: #FFFFFF;
     line-height: 1.6;
     overflow-x: hidden;
+    transition: 0.3s;
 }
 
 /* SCROLL */
@@ -176,12 +177,11 @@ body::-webkit-scrollbar-thumb:hover {
     margin: auto;
 }
 
-/* BOTON GENERAL */
+/* BOTONES */
 
-.btn {
+.btn,
+.btn-producto {
     display: inline-block;
-
-    margin-top: 30px;
 
     background-color: #00D9FF;
     color: #000000;
@@ -197,7 +197,13 @@ body::-webkit-scrollbar-thumb:hover {
     transition: 0.3s;
 }
 
-.btn:hover {
+.btn {
+    margin-top: 30px;
+}
+
+.btn:hover,
+.btn-producto:hover,
+.btn-carrito:hover {
     background-color: #00B8D4;
     transform: scale(1.05);
 }
@@ -226,8 +232,6 @@ section {
 
     padding: 70px 8%;
 }
-
-/* SIDEBAR */
 
 .sidebar {
     width: 270px;
@@ -282,12 +286,12 @@ section {
     color: black;
 }
 
-/* PRODUCTOS */
-
 .destacados {
     flex: 1;
     padding: 0;
 }
+
+/* PRODUCTOS */
 
 .contenedor-productos {
     display: grid;
@@ -315,7 +319,6 @@ section {
 
 .producto:hover {
     transform: translateY(-10px);
-
     border-color: #00D9FF;
 }
 
@@ -344,31 +347,7 @@ section {
     margin: 15px 0 25px;
 }
 
-/* BOTON VER PRODUCTO */
-
-.btn-producto {
-    display: inline-block;
-
-    background-color: #00D9FF;
-    color: #000000;
-
-    padding: 12px 22px;
-
-    border-radius: 10px;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.btn-producto:hover {
-    background-color: #00B8D4;
-    transform: scale(1.05);
-}
-
-/* PAGINA TIENDA */
+/* DETALLE PRODUCTO */
 
 .detalle-producto {
     display: flex;
@@ -380,17 +359,14 @@ section {
     flex-wrap: wrap;
 }
 
-.detalle-img {
+.detalle-img,
+.detalle-info {
     flex: 1;
 }
 
 .detalle-img img {
     width: 100%;
     border-radius: 20px;
-}
-
-.detalle-info {
-    flex: 1;
 }
 
 .detalle-info h2 {
@@ -423,8 +399,6 @@ section {
     font-size: 18px;
 }
 
-/* BOTON CARRITO */
-
 .btn-carrito {
     background-color: #00D9FF;
     color: #000000;
@@ -445,11 +419,6 @@ section {
     gap: 10px;
 
     transition: 0.3s;
-}
-
-.btn-carrito:hover {
-    background-color: #00B8D4;
-    transform: scale(1.05);
 }
 
 /* NOTICIAS */
@@ -476,7 +445,6 @@ section {
 
 .card-noticia:hover {
     transform: translateY(-10px);
-
     border-color: #00D9FF;
 }
 
@@ -493,7 +461,6 @@ section {
 
 .contenido-noticia h3 {
     font-size: 24px;
-
     margin-bottom: 15px;
 }
 
@@ -511,7 +478,8 @@ section {
     flex-wrap: wrap;
 }
 
-.texto-mision {
+.texto-mision,
+.imagen-mision {
     flex: 1;
 }
 
@@ -528,13 +496,8 @@ section {
     color: #D1D5DB;
 }
 
-.imagen-mision {
-    flex: 1;
-}
-
 .imagen-mision img {
     width: 100%;
-
     border-radius: 18px;
 }
 
@@ -572,6 +535,59 @@ section {
     transform: scale(1.2);
 }
 
+/* ===== TEMA CLARO ===== */
+
+body.light-mode {
+    background-color: #F3F4F6;
+    color: #111827;
+}
+
+body.light-mode .header,
+body.light-mode .sidebar,
+body.light-mode .producto,
+body.light-mode .card-noticia,
+body.light-mode .footer {
+    background-color: #FFFFFF;
+}
+
+body.light-mode .nav-links a,
+body.light-mode .sidebar ul li a {
+    color: #111827;
+}
+
+body.light-mode .contenido-noticia p,
+body.light-mode .texto-mision p,
+body.light-mode .detalle-info ul li {
+    color: #374151;
+}
+
+body.light-mode .producto {
+    border: 1px solid #D1D5DB;
+}
+
+body.light-mode .producto p,
+body.light-mode .detalle-info h2,
+body.light-mode .titulo-seccion {
+    color: #0099CC;
+}
+
+body.light-mode #btnTema {
+    background-color: #111827;
+    color: white;
+}
+
+body.light-mode #btnTema:hover {
+    background-color: #1F2937;
+}
+
+body.light-mode::-webkit-scrollbar-track {
+    background: #E5E7EB;
+}
+
+body.light-mode::-webkit-scrollbar-thumb {
+    background: #00B8D4;
+}
+
 /* RESPONSIVE */
 
 @media(max-width: 1100px) {
@@ -586,7 +602,6 @@ section {
         position: relative;
         top: 0;
     }
-
 }
 
 @media(max-width: 900px) {
@@ -622,10 +637,7 @@ section {
         font-size: 18px;
     }
 
-    .contenido-mision {
-        flex-direction: column;
-    }
-
+    .contenido-mision,
     .detalle-producto {
         flex-direction: column;
     }
@@ -633,7 +645,6 @@ section {
     .detalle-info h2 {
         font-size: 38px;
     }
-
 }
 
 @media(max-width: 600px) {
@@ -684,5 +695,4 @@ section {
         width: 100%;
         justify-content: center;
     }
-
 }
