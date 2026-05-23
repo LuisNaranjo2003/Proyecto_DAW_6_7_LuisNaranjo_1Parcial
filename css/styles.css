@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #0B1120;
     color: #FFFFFF;
@@ -12,7 +12,24 @@ body{
     overflow-x: hidden;
 }
 
-.header{
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #111827;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #00D9FF;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #00B8D4;
+}
+
+.header {
     width: 100%;
     min-height: 80px;
     background-color: #111827;
@@ -20,7 +37,6 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 
     padding: 15px 60px;
 
@@ -32,8 +48,8 @@ body{
     border-bottom: 2px solid #00D9FF;
 }
 
-.logo-text{
-    font-size: 28px;
+.logo-text {
+    font-size: 30px;
     color: #00D9FF;
 
     display: flex;
@@ -41,66 +57,55 @@ body{
     gap: 10px;
 }
 
-.logo-text i{
-    font-size: 32px;
+.logo-text i {
+    font-size: 34px;
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     list-style: none;
     gap: 30px;
-    flex-wrap: wrap;
 }
 
-.nav-links a{
+.nav-links a {
     text-decoration: none;
-    color: white;
+    color: #FFFFFF;
     font-size: 17px;
     transition: 0.3s;
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
     color: #00D9FF;
 }
 
-.cambio-tema{
-    display: flex;
-    align-items: center;
-}
-
-#btnTema{
+#btnTema {
     background-color: #00D9FF;
-    color: black;
+    color: #000000;
 
     border: none;
 
     padding: 12px 22px;
 
-    border-radius: 8px;
+    border-radius: 10px;
 
     font-size: 15px;
     font-weight: bold;
 
     cursor: pointer;
 
-    transition: 0.3s;
-
     display: flex;
     align-items: center;
     gap: 10px;
+
+    transition: 0.3s;
 }
 
-#btnTema:hover{
+#btnTema:hover {
     background-color: #00B8D4;
     transform: scale(1.05);
 }
 
-.icono-luna{
-    width: 20px;
-    height: 20px;
-}
-
-.hero{
+.hero {
     width: 100%;
     height: 90vh;
 
@@ -114,279 +119,343 @@ body{
     align-items: center;
 
     position: relative;
-
-    overflow: hidden;
 }
 
-.overlay{
+.hero-catalogo {
+    width: 100%;
+    height: 55vh;
+
+    background-image: url("../img/titulo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.overlay {
     position: absolute;
 
     width: 100%;
     height: 100%;
 
-    background: rgba(0,0,0,0.6);
-
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.65);
 }
 
-.imagen-titulo{
-    position: absolute;
-
-    width: 500px;
-    max-width: 80%;
-
-    opacity: 0.12;
-
-    z-index: 1;
-
-    object-fit: contain;
-}
-
-.hero-content{
+.hero-content {
     position: relative;
-
     z-index: 2;
-
-    width: 80%;
 
     text-align: center;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 80%;
 }
 
-.hero-content h2{
-    font-size: 55px;
+.hero-content h2 {
+    font-size: 58px;
     margin-bottom: 20px;
 }
 
-.hero-content p{
+.hero-content p {
     font-size: 20px;
-    margin-bottom: 30px;
+    color: #D1D5DB;
 
-    color: #d1d5db;
-
-    max-width: 900px;
+    max-width: 850px;
+    margin: auto;
 }
 
-.btn{
+.btn {
     display: inline-block;
 
+    margin-top: 30px;
+
     background-color: #00D9FF;
-    color: #000;
+    color: #000000;
 
     padding: 14px 30px;
 
-    text-decoration: none;
+    border-radius: 10px;
 
-    border-radius: 8px;
+    text-decoration: none;
 
     font-weight: bold;
 
     transition: 0.3s;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #00B8D4;
     transform: scale(1.05);
 }
 
-section{
-    padding: 80px 10%;
+section {
+    padding: 80px 8%;
 }
 
-.titulo-seccion{
+.titulo-seccion {
     text-align: center;
 
-    font-size: 38px;
-
-    margin-bottom: 50px;
+    font-size: 42px;
 
     color: #00D9FF;
+
+    margin-bottom: 50px;
 }
 
-.contenedor-noticias{
+.catalogo-layout {
     display: flex;
+    gap: 35px;
 
-    gap: 30px;
-
-    flex-wrap: wrap;
-
-    justify-content: center;
+    padding: 70px 8%;
 }
 
-.card-noticia{
+.sidebar {
+    width: 270px;
+
     background-color: #111827;
 
-    width: 320px;
+    padding: 25px;
 
-    border-radius: 15px;
+    border-radius: 18px;
+
+    border: 1px solid #00D9FF;
+
+    height: fit-content;
+
+    position: sticky;
+    top: 120px;
+}
+
+.sidebar h2 {
+    font-size: 30px;
+    color: #00D9FF;
+
+    margin-bottom: 25px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #00D9FF;
+    color: black;
+}
+
+.destacados {
+    flex: 1;
+    padding: 0;
+}
+
+.contenedor-productos {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+}
+
+.producto {
+    background-color: #111827;
+
+    border-radius: 18px;
 
     overflow: hidden;
 
-    transition: 0.3s;
+    text-align: center;
 
     border: 1px solid transparent;
+
+    transition: 0.3s;
 }
 
-.card-noticia:hover{
+.producto:hover {
     transform: translateY(-10px);
 
     border-color: #00D9FF;
 }
 
-.card-noticia img{
+.producto img {
     width: 100%;
-
-    height: 220px;
-
-    object-fit: cover;
-}
-
-.contenido-noticia{
-    padding: 25px;
-}
-
-.contenido-noticia h3{
-    margin-bottom: 15px;
-
-    font-size: 22px;
-}
-
-.contenido-noticia p{
-    color: #d1d5db;
-}
-
-.contenido-mision{
-    display: flex;
-
-    align-items: center;
-
-    gap: 50px;
-
-    flex-wrap: wrap;
-}
-
-.texto-mision{
-    flex: 1;
-}
-
-.texto-mision h2{
-    font-size: 40px;
-
-    margin-bottom: 20px;
-
-    color: #00D9FF;
-}
-
-.texto-mision p{
-    font-size: 18px;
-
-    color: #d1d5db;
-}
-
-.imagen-mision{
-    flex: 1;
-}
-
-.imagen-mision img{
-    width: 100%;
-
-    border-radius: 15px;
-}
-
-.contenedor-productos{
-    display: flex;
-
-    gap: 30px;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-}
-
-.producto{
-    background-color: #111827;
-
-    width: 280px;
-
-    border-radius: 15px;
-
-    overflow: hidden;
-
-    text-align: center;
-
-    transition: 0.3s;
-}
-
-.producto:hover{
-    transform: scale(1.05);
-}
-
-.producto img{
-    width: 100%;
-
     height: 250px;
 
     object-fit: cover;
 }
 
-.producto h3{
-    margin-top: 20px;
-
+.producto h3 {
     font-size: 24px;
+
+    margin-top: 20px;
 
     padding: 0 15px;
 }
 
-.producto p{
-    margin: 15px 0 25px;
+.producto p {
+    font-size: 22px;
 
     color: #00D9FF;
 
-    font-size: 20px;
-
     font-weight: bold;
+
+    margin: 15px 0 25px;
 }
 
-.footer{
+.contenedor-noticias {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 30px;
+}
+
+.card-noticia {
     background-color: #111827;
 
-    padding: 30px;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid transparent;
+
+    transition: 0.3s;
+}
+
+.card-noticia:hover {
+    transform: translateY(-10px);
+
+    border-color: #00D9FF;
+}
+
+.card-noticia img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.contenido-noticia {
+    padding: 25px;
+}
+
+.contenido-noticia h3 {
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.contenido-noticia p {
+    color: #D1D5DB;
+}
+
+.contenido-mision {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    flex-wrap: wrap;
+}
+
+.texto-mision {
+    flex: 1;
+}
+
+.texto-mision h2 {
+    font-size: 42px;
+
+    color: #00D9FF;
+
+    margin-bottom: 20px;
+}
+
+.texto-mision p {
+    font-size: 18px;
+    color: #D1D5DB;
+}
+
+.imagen-mision {
+    flex: 1;
+}
+
+.imagen-mision img {
+    width: 100%;
+
+    border-radius: 18px;
+}
+
+.footer {
+    background-color: #111827;
+
+    padding: 35px;
 
     text-align: center;
 
     border-top: 2px solid #00D9FF;
 }
 
-.footer p{
+.footer p {
     margin-bottom: 20px;
 }
 
-.redes{
+.redes {
     display: flex;
-
     justify-content: center;
-
     gap: 20px;
 }
 
-.redes a{
+.redes a {
     color: #00D9FF;
 
-    font-size: 28px;
+    font-size: 30px;
 
     transition: 0.3s;
 }
 
-.redes a:hover{
+.redes a:hover {
     transform: scale(1.2);
 }
 
-@media(max-width: 900px){
+@media(max-width: 1100px) {
 
-    .header{
+    .catalogo-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+
+        position: relative;
+        top: 0;
+    }
+
+}
+
+@media(max-width: 900px) {
+
+    .header {
         flex-direction: column;
 
         gap: 20px;
@@ -394,84 +463,82 @@ section{
         padding: 20px;
     }
 
-    .nav-links{
+    .nav-links {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
-    .hero{
+    .hero {
         height: auto;
-
         padding: 120px 0;
     }
 
-    .hero-content h2{
-        font-size: 40px;
+    .hero-catalogo {
+        height: auto;
+        padding: 100px 0;
     }
 
-    .hero-content p{
+    .hero-content h2 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
         font-size: 18px;
     }
 
-    .contenido-mision{
+    .contenido-mision {
         flex-direction: column;
     }
 
 }
 
-@media(max-width: 600px){
+@media(max-width: 600px) {
 
-    section{
+    section {
         padding: 60px 6%;
     }
 
-    .logo-text{
-        font-size: 22px;
+    .catalogo-layout {
+        padding: 60px 6%;
     }
 
-    .logo-text i{
-        font-size: 26px;
+    .logo-text {
+        font-size: 24px;
     }
 
-    .nav-links{
+    .logo-text i {
+        font-size: 28px;
+    }
+
+    .nav-links {
         flex-direction: column;
-
         text-align: center;
-
         gap: 15px;
     }
 
-    .hero-content{
+    .hero-content {
         width: 95%;
     }
 
-    .hero-content h2{
-        font-size: 30px;
+    .hero-content h2 {
+        font-size: 32px;
     }
 
-    .hero-content p{
+    .hero-content p {
         font-size: 16px;
     }
 
-    .titulo-seccion{
-        font-size: 30px;
+    .titulo-seccion {
+        font-size: 32px;
     }
 
-    .card-noticia{
-        width: 100%;
+    .producto img {
+        height: 220px;
     }
 
-    .producto{
+    #btnTema {
         width: 100%;
-    }
-
-    #btnTema{
-        width: 100%;
-
         justify-content: center;
-    }
-
-    .imagen-titulo{
-        width: 300px;
     }
 
 }
