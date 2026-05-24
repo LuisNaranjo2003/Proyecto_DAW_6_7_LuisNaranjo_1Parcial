@@ -1,24 +1,48 @@
 const btnTema = document.getElementById("btnTema");
 
-if(btnTema){
+if (btnTema) {
 
+    const temaGuardado = localStorage.getItem("tema");
+
+    if (temaGuardado === "claro") {
+
+        document.body.classList.add("light-mode");
+
+        btnTema.innerHTML = `
+            <i class="ti ti-sun"></i>
+            Tema Oscuro
+        `;
+
+    } else {
+
+        btnTema.innerHTML = `
+            <i class="ti ti-moon"></i>
+            Tema Claro
+        `;
+
+    }
     btnTema.addEventListener("click", () => {
 
         document.body.classList.toggle("light-mode");
 
-        if(document.body.classList.contains("light-mode")){
+        if (document.body.classList.contains("light-mode")) {
+
+            localStorage.setItem("tema", "claro");
 
             btnTema.innerHTML = `
                 <i class="ti ti-sun"></i>
                 Tema Oscuro
             `;
 
-        }else{
+        } else {
+
+            localStorage.setItem("tema", "oscuro");
 
             btnTema.innerHTML = `
                 <i class="ti ti-moon"></i>
                 Tema Claro
             `;
+
         }
 
     });
@@ -29,7 +53,7 @@ const menuBtn = document.getElementById("menuBtn");
 
 const navLinks = document.getElementById("navLinks");
 
-if(menuBtn){
+if (menuBtn) {
 
     menuBtn.addEventListener("click", () => {
 
@@ -41,7 +65,7 @@ if(menuBtn){
 
 const formulario = document.getElementById("formularioContacto");
 
-if(formulario){
+if (formulario) {
 
     formulario.addEventListener("submit", (e) => {
 
@@ -55,21 +79,21 @@ if(formulario){
 
         const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        if(nombre === ""){
+        if (nombre === "") {
 
             alert("Ingrese su nombre");
             return;
 
         }
 
-        if(!regexCorreo.test(correo)){
+        if (!regexCorreo.test(correo)) {
 
             alert("Ingrese un correo válido");
             return;
 
         }
 
-        if(mensaje.length < 10){
+        if (mensaje.length < 10) {
 
             alert("El mensaje debe tener mínimo 10 caracteres");
             return;
@@ -88,7 +112,7 @@ let slideIndex = 0;
 
 const slides = document.querySelectorAll(".slide");
 
-function mostrarSlides(){
+function mostrarSlides() {
 
     slides.forEach((slide) => {
 
@@ -98,13 +122,13 @@ function mostrarSlides(){
 
     slideIndex++;
 
-    if(slideIndex > slides.length){
+    if (slideIndex > slides.length) {
 
         slideIndex = 1;
 
     }
 
-    if(slides.length > 0){
+    if (slides.length > 0) {
 
         slides[slideIndex - 1].style.display = "block";
 
@@ -114,7 +138,7 @@ function mostrarSlides(){
 
 }
 
-if(slides.length > 0){
+if (slides.length > 0) {
 
     mostrarSlides();
 
@@ -124,13 +148,13 @@ window.addEventListener("scroll", () => {
 
     const header = document.querySelector(".header");
 
-    if(header){
+    if (header) {
 
-        if(window.scrollY > 50){
+        if (window.scrollY > 50) {
 
             header.style.boxShadow = "0 5px 20px rgba(0,0,0,0.5)";
 
-        }else{
+        } else {
 
             header.style.boxShadow = "none";
 
@@ -272,107 +296,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 <li><strong>Sistema:</strong> HyperOS</li>
             `
 
-        },
-
-        honormagic6: {
-
-            nombre: "Honor Magic 6",
-
-            precio: "$620",
-
-            imagen: "img/Honor_Magic_6.jpg",
-
-            descripcion: "Elegancia premium con batería gigante y cámaras avanzadas.",
-
-            especificaciones: `
-                <li><strong>Pantalla:</strong> OLED LTPO 6.78”</li>
-                <li><strong>Procesador:</strong> Snapdragon 8 Gen 3</li>
-                <li><strong>RAM:</strong> 12GB</li>
-                <li><strong>Almacenamiento:</strong> 512GB</li>
-                <li><strong>Cámara Principal:</strong> 50MP</li>
-                <li><strong>Ultra Gran Angular:</strong> 50MP</li>
-                <li><strong>Teleobjetivo:</strong> 180MP</li>
-                <li><strong>Cámara Frontal:</strong> 50MP</li>
-                <li><strong>Batería:</strong> 5600mAh</li>
-                <li><strong>Sistema:</strong> MagicOS 8</li>
-            `
-
-        },
-
-        motoedge50: {
-
-            nombre: "Motorola Edge 50",
-
-            precio: "$690",
-
-            imagen: "img/Motorola_Edge_50.jpg",
-
-            descripcion: "Pantalla curva premium y experiencia Android fluida.",
-
-            especificaciones: `
-                <li><strong>Pantalla:</strong> pOLED 6.7” 144Hz</li>
-                <li><strong>Procesador:</strong> Snapdragon 7 Gen 3</li>
-                <li><strong>RAM:</strong> 12GB</li>
-                <li><strong>Almacenamiento:</strong> 256GB</li>
-                <li><strong>Cámara Principal:</strong> 50MP Sony LYTIA</li>
-                <li><strong>Ultra Gran Angular:</strong> 13MP</li>
-                <li><strong>Teleobjetivo:</strong> 10MP</li>
-                <li><strong>Cámara Frontal:</strong> 32MP</li>
-                <li><strong>Batería:</strong> 5000mAh</li>
-                <li><strong>Sistema:</strong> Android 14</li>
-            `
-
-        },
-
-        realmegt6: {
-
-            nombre: "Realme GT 6",
-
-            precio: "$740",
-
-            imagen: "img/Realme_GT_6.jpg",
-
-            descripcion: "Rendimiento extremo con carga ultra rápida de 120W.",
-
-            especificaciones: `
-                <li><strong>Pantalla:</strong> AMOLED 6.78” 120Hz</li>
-                <li><strong>Procesador:</strong> Snapdragon 8s Gen 3</li>
-                <li><strong>RAM:</strong> 16GB</li>
-                <li><strong>Almacenamiento:</strong> 512GB</li>
-                <li><strong>Cámara Principal:</strong> 50MP Sony</li>
-                <li><strong>Ultra Gran Angular:</strong> 8MP</li>
-                <li><strong>Teleobjetivo:</strong> 50MP</li>
-                <li><strong>Cámara Frontal:</strong> 32MP</li>
-                <li><strong>Batería:</strong> 5500mAh</li>
-                <li><strong>Carga:</strong> 120W SUPERVOOC</li>
-            `
-
-        },
-
-        opporeno12: {
-
-            nombre: "Oppo Reno 12",
-
-            precio: "$620",
-
-            imagen: "img/Oppo_Reno_12.jpg",
-
-            descripcion: "Diseño moderno con IA avanzada y excelente cámara selfie.",
-
-            especificaciones: `
-                <li><strong>Pantalla:</strong> AMOLED 6.7” 120Hz</li>
-                <li><strong>Procesador:</strong> Dimensity 7300</li>
-                <li><strong>RAM:</strong> 12GB</li>
-                <li><strong>Almacenamiento:</strong> 256GB</li>
-                <li><strong>Cámara Principal:</strong> 50MP Sony</li>
-                <li><strong>Ultra Gran Angular:</strong> 8MP</li>
-                <li><strong>Macro:</strong> 2MP</li>
-                <li><strong>Cámara Frontal:</strong> 32MP</li>
-                <li><strong>Batería:</strong> 5000mAh</li>
-                <li><strong>Carga:</strong> 80W SUPERVOOC</li>
-                <li><strong>Sistema:</strong> ColorOS 14</li>
-            `
-
         }
 
     };
@@ -381,33 +304,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const id = params.get("id");
 
-    if(id && productos[id]){
+    if (id && productos[id]) {
 
         const producto = productos[id];
 
-        document.getElementById("producto-img").src = producto.imagen;
+        const productoImg = document.getElementById("producto-img");
 
-        document.getElementById("producto-nombre").textContent = producto.nombre;
+        const productoNombre = document.getElementById("producto-nombre");
 
-        document.getElementById("producto-precio").textContent = producto.precio;
+        const productoPrecio = document.getElementById("producto-precio");
 
-        document.getElementById("producto-desc").textContent = producto.descripcion;
+        const productoDesc = document.getElementById("producto-desc");
 
-        const specs = document.getElementById("producto-specs");
+        const productoSpecs = document.getElementById("producto-specs");
 
-        if(specs){
+        if (productoImg) {
 
-            specs.innerHTML = producto.especificaciones;
+            productoImg.src = producto.imagen;
 
         }
 
+        if (productoNombre) {
+
+            productoNombre.textContent = producto.nombre;
+
+        }
+        if (productoPrecio) {
+
+            productoPrecio.textContent = producto.precio;
+
+        }
+        if (productoDesc) {
+
+            productoDesc.textContent = producto.descripcion;
+
+        }
+        if (productoSpecs) {
+
+            productoSpecs.innerHTML = producto.especificaciones;
+        }
+    }
+    const btnCarrito = document.getElementById("btnCarrito");
+    const carritoCount = document.getElementById("carrito-count");
+    let contador = localStorage.getItem("carritoCount") || 0;
+    contador = parseInt(contador);
+
+    if (carritoCount) {
+
+        carritoCount.textContent = contador;
+
     }
 
-    const btnCarrito = document.getElementById("btnCarrito");
-
-    if(btnCarrito){
+    if (btnCarrito) {
 
         btnCarrito.addEventListener("click", () => {
+
+            contador++;
+
+            carritoCount.textContent = contador;
+
+            localStorage.setItem("carritoCount", contador);
 
             alert("Producto añadido al carrito");
 
