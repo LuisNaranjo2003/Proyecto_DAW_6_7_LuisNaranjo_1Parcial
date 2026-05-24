@@ -2,257 +2,147 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>GuayaPhone | Producto</title>
 
     <link rel="stylesheet" href="css/styles.css">
-
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 </head>
 
 <body>
 
-    <header class="header">
+<header class="header">
 
-        <div class="logo">
+    <div class="logo">
+        <h1 class="logo-text">
+            <i class="ti ti-device-mobile"></i>
+            GuayaPhone
+        </h1>
+    </div>
 
-            <h1 class="logo-text">
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+    </nav>
 
-                <i class="ti ti-device-mobile"></i>
+    <div class="acciones-header">
 
-                GuayaPhone
-
-            </h1>
-
+        <div class="carrito-icono">
+            <button id="btnVerCarrito">
+                <i class="ti ti-shopping-cart"></i>
+                <span id="carrito-count">0</span>
+            </button>
         </div>
-
-        <nav class="navbar">
-
-            <ul class="nav-links">
-
-                <li>
-                    <a href="index.html">Inicio</a>
-                </li>
-
-                <li>
-                    <a href="catalogo.html">Catálogo</a>
-                </li>
-
-                <li>
-                    <a href="sobre-nosotros.html">Sobre Nosotros</a>
-                </li>
-
-            </ul>
-
-        </nav>
 
         <div class="cambio-tema">
-
             <button id="btnTema">
-
                 <i class="ti ti-moon"></i>
-
                 Cambiar Tema
-
             </button>
-
         </div>
 
-    </header>
+    </div>
 
-    <section class="hero-catalogo">
+</header>
 
-        <div class="overlay"></div>
+<!-- HERO -->
+<section class="hero-catalogo">
+    <div class="overlay"></div>
 
-        <div class="hero-content">
+    <div class="hero-content">
+        <h2>Detalle del Producto</h2>
+        <p>Conoce las especificaciones y características del smartphone.</p>
+    </div>
+</section>
 
-            <h2>
-                Detalle del Producto
-            </h2>
+<!-- DETALLE -->
+<section class="detalle-producto">
 
-            <p>
-                Conoce las especificaciones y características del smartphone.
-            </p>
+    <div class="detalle-img">
+        <img id="producto-img" src="" alt="Producto">
+    </div>
 
+    <div class="detalle-info">
+
+        <h2 id="producto-nombre"></h2>
+        <p class="precio" id="producto-precio"></p>
+        <p id="producto-desc"></p>
+
+        <h3>Especificaciones</h3>
+        <ul id="producto-specs"></ul>
+
+        <button class="btn-carrito" id="btnCarrito">
+            <i class="ti ti-shopping-cart-plus"></i>
+            Añadir al Carrito
+        </button>
+
+    </div>
+
+</section>
+
+<!-- RELACIONADOS -->
+<section class="destacados">
+
+    <h2 class="titulo-seccion">Productos Relacionados</h2>
+
+    <div class="contenedor-productos">
+
+        <article class="producto">
+            <img src="img/iphone15.jpg" alt="iPhone 15 Pro">
+            <h3>iPhone 15 Pro</h3>
+            <p>$1199</p>
+            <a href="tienda.html?id=iphone15pro" class="btn-producto">Ver Producto</a>
+        </article>
+
+        <article class="producto">
+            <img src="img/iphoen16.jpg" alt="iPhone 16 Pro">
+            <h3>iPhone 16 Pro</h3>
+            <p>$1299</p>
+            <a href="tienda.html?id=iphone16pro" class="btn-producto">Ver Producto</a>
+        </article>
+
+        <article class="producto">
+            <img src="img/samsungs24.jpg" alt="Samsung S24 Ultra">
+            <h3>Samsung S24 Ultra</h3>
+            <p>$1299</p>
+            <a href="tienda.html?id=s24ultra" class="btn-producto">Ver Producto</a>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- 🛒 MODAL CARRITO -->
+<div id="modal-carrito" class="modal-carrito oculto">
+
+    <div class="carrito-contenido">
+
+        <h2>Tu Carrito</h2>
+
+        <div id="carrito-items"></div>
+
+        <div class="carrito-resumen">
+            <p>Subtotal: $<span id="subtotal">0</span></p>
+            <p>IVA (15%): $<span id="iva">0</span></p>
+            <h3>Total: $<span id="total">0</span></h3>
         </div>
 
-    </section>
+        <button id="cerrar-carrito">Cerrar</button>
 
-    <section class="detalle-producto">
+    </div>
 
-        <div class="detalle-img">
+</div>
 
-            <img id="producto-img" src="" alt="Producto">
+<footer class="footer">
+    <p>© 2026 GuayaPhone - Todos los derechos reservados</p>
+</footer>
 
-        </div>
-
-        <div class="detalle-info">
-
-            <h2 id="producto-nombre"></h2>
-
-            <p class="precio" id="producto-precio"></p>
-
-            <p id="producto-desc"></p>
-
-            <h3>
-                Especificaciones
-            </h3>
-
-            <ul id="producto-specs">
-
-            </ul>
-
-            <button class="btn-carrito" id="btnCarrito">
-
-                <i class="ti ti-shopping-cart-plus"></i>
-
-                Añadir al Carrito
-
-            </button>
-
-        </div>
-
-    </section>
-
-    <section class="destacados">
-
-        <h2 class="titulo-seccion">
-            Productos Relacionados
-        </h2>
-
-        <div class="contenedor-productos">
-
-            <article class="producto">
-
-                <img src="img/iphone15pro.jpg" alt="iPhone 15 Pro">
-
-                <h3>iPhone 15 Pro</h3>
-
-                <p>$1199</p>
-
-                <a href="tienda.html?id=iphone15pro" class="btn-producto">
-                    Ver Producto
-                </a>
-
-            </article>
-
-            <article class="producto">
-
-                <img src="img/s24ultra.jpg" alt="Samsung S24 Ultra">
-
-                <h3>Samsung S24 Ultra</h3>
-
-                <p>$1299</p>
-
-                <a href="tienda.html?id=s24ultra" class="btn-producto">
-                    Ver Producto
-                </a>
-
-            </article>
-
-            <article class="producto">
-
-                <img src="img/xiaomi14ultra.jpg" alt="Xiaomi 14 Ultra">
-
-                <h3>Xiaomi 14 Ultra</h3>
-
-                <p>$1150</p>
-
-                <a href="tienda.html?id=xiaomi14ultra" class="btn-producto">
-                    Ver Producto
-                </a>
-
-            </article>
-
-            <article class="producto">
-
-                <img src="img/pocof5pro.jpg" alt="Poco F5 Pro">
-
-                <h3>Poco F5 Pro</h3>
-
-                <p>$620</p>
-
-                <a href="tienda.html?id=pocof5pro" class="btn-producto">
-                    Ver Producto
-                </a>
-
-            </article>
-
-            <article class="producto">
-
-                <img src="img/motoedge50.jpg" alt="Motorola Edge 50">
-
-                <h3>Motorola Edge 50</h3>
-
-                <p>$690</p>
-
-                <a href="tienda.html?id=motoedge50" class="btn-producto">
-                    Ver Producto
-                </a>
-
-            </article>
-
-            <article class="producto">
-
-                <img src="img/honormagic6.jpg" alt="Honor Magic 6">
-
-                <h3>Honor Magic 6</h3>
-
-                <p>$620</p>
-
-                <a href="tienda.html?id=honormagic6" class="btn-producto">
-                    Ver Producto
-                </a>
-
-            </article>
-
-            <article class="producto">
-
-                <img src="img/realmegt6.jpg" alt="Realme GT 6">
-
-                <h3>Realme GT 6</h3>
-
-                <p>$740</p>
-
-                <a href="tienda.html?id=realmegt6" class="btn-producto">
-                    Ver Producto
-                </a>
-
-            </article>
-
-            <article class="producto">
-
-                <img src="img/opporeno12.jpg" alt="Oppo Reno 12">
-
-                <h3>Oppo Reno 12</h3>
-
-                <p>$620</p>
-
-                <a href="tienda.html?id=opporeno12" class="btn-producto">
-                    Ver Producto
-                </a>
-
-            </article>
-
-        </div>
-
-    </section>
-
-    <footer class="footer">
-
-        <p>
-            © 2026 GuayaPhone - Todos los derechos reservados
-        </p>
-
-    </footer>
-
-    <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 
 </body>
-
 </html>

@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             precio: "$1399",
 
-            imagen: "img/iphone16pro.jpg",
+            imagen: "img/iphoen16.jpg",
 
             descripcion: "El nuevo iPhone 16 Pro ofrece máxima potencia con Apple Intelligence y cámaras profesionales.",
 
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             precio: "$1199",
 
-            imagen: "img/iphone15pro.jpg",
+            imagen: "img/iphone15.jpg",
 
             descripcion: "Diseño de titanio y rendimiento extremo gracias al chip A17 Pro.",
 
@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             precio: "$1299",
 
-            imagen: "img/s24ultra.jpg",
+            imagen: "img/samsungs24.jpg",
 
             descripcion: "El Galaxy más avanzado con Galaxy AI y cámara de 200MP.",
 
@@ -254,7 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             precio: "$620",
 
-            imagen: "img/pocof5pro.jpg",
+            imagen: "img/xiaomipocof5.jpg",
 
             descripcion: "Potencia gamer con Snapdragon 8+ Gen 1 y pantalla WQHD+.",
 
@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             precio: "$620",
 
-            imagen: "img/honormagic6.jpg",
+            imagen: "img/Honor_Magic_6.jpg",
 
             descripcion: "Elegancia premium con batería gigante y cámaras avanzadas.",
 
@@ -305,7 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             precio: "$690",
 
-            imagen: "img/motoedge50.jpg",
+            imagen: "img/Motorola_Edge_50.jpg",
 
             descripcion: "Pantalla curva premium y experiencia Android fluida.",
 
@@ -330,7 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             precio: "$740",
 
-            imagen: "img/realmegt6.jpg",
+            imagen: "img/Realme_GT_6.jpg",
 
             descripcion: "Rendimiento extremo con carga ultra rápida de 120W.",
 
@@ -355,7 +355,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             precio: "$620",
 
-            imagen: "img/opporeno12.jpg",
+            imagen: "img/Oppo_Reno_12.jpg",
 
             descripcion: "Diseño moderno con IA avanzada y excelente cámara selfie.",
 

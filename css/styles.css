@@ -462,6 +462,12 @@ section {
     height: 220px;
 
     object-fit: cover;
+
+    transition: 0.4s;
+}
+
+.card-noticia:hover img {
+    transform: scale(1.05);
 }
 
 .contenido-noticia {
@@ -508,6 +514,74 @@ section {
 .imagen-mision img {
     width: 100%;
     border-radius: 18px;
+
+    transition: 0.4s;
+}
+
+.imagen-mision img:hover {
+    transform: scale(1.03);
+}
+
+/* FORMULARIO CONTACTO */
+
+.formulario-contacto {
+    max-width: 750px;
+
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+
+    background: #111827;
+
+    padding: 45px;
+
+    border-radius: 22px;
+
+    border: 1px solid #00D9FF;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+
+    transition: 0.3s;
+}
+
+.formulario-contacto:hover {
+    transform: translateY(-5px);
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+
+    padding: 16px 18px;
+
+    border-radius: 14px;
+
+    border: 1px solid transparent;
+
+    background-color: #1F2937;
+
+    color: #FFFFFF;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formulario-contacto input {
+    height: 58px;
+}
+
+.formulario-contacto textarea {
+    min-height: 170px;
+
+    resize: vertical;
 }
 
 /* FOOTER */
@@ -522,105 +596,165 @@ section {
     border-top: 2px solid #00D9FF;
 }
 
-.footer p {
-    margin-bottom: 20px;
-}
+/* =========================
+   CARRITO (ARREGLADO)
+========================= */
 
-.redes {
+.acciones-header {
     display: flex;
-    justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
-.redes a {
+.carrito-icono {
+    position: relative;
+}
+
+.carrito-icono button {
+    background: transparent;
     color: #00D9FF;
 
-    font-size: 30px;
+    border: 2px solid #00D9FF;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
 
     transition: 0.3s;
 }
 
-.redes a:hover {
-    transform: scale(1.2);
+.carrito-icono button:hover {
+    background: #00D9FF;
+    color: #000;
+    transform: scale(1.05);
 }
 
-/* ===== TEMA CLARO ===== */
+/* CONTADOR */
+#carrito-count {
+    background: #FF3B30;
+    color: #fff;
 
-body.light-mode {
-    background-color: #F3F4F6;
-    color: #111827;
+    font-size: 12px;
+
+    font-weight: bold;
+
+    padding: 3px 7px;
+
+    border-radius: 50%;
+
+    position: absolute;
+    top: -8px;
+    right: -10px;
 }
 
-body.light-mode .header,
-body.light-mode .sidebar,
-body.light-mode .producto,
-body.light-mode .card-noticia,
-body.light-mode .footer {
-    background-color: #FFFFFF;
+/* MODAL */
+.modal-carrito {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
 }
 
-body.light-mode .nav-links a,
-body.light-mode .sidebar ul li a {
-    color: #111827;
+.carrito-contenido {
+    width: 420px;
+    max-width: 90%;
+
+    background: #111827;
+
+    border: 2px solid #00D9FF;
+    border-radius: 18px;
+
+    padding: 25px;
+
+    animation: carritoFade 0.2s ease-in-out;
 }
 
-body.light-mode .contenido-noticia p,
-body.light-mode .texto-mision p,
-body.light-mode .detalle-info ul li {
-    color: #374151;
+@keyframes carritoFade {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
-body.light-mode .producto {
-    border: 1px solid #D1D5DB;
+#carrito-items {
+    max-height: 250px;
+    overflow-y: auto;
+    margin-bottom: 15px;
 }
 
-body.light-mode .producto p,
-body.light-mode .detalle-info h2,
-body.light-mode .titulo-seccion {
-    color: #0099CC;
+#carrito-items div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #1F2937;
 }
 
-body.light-mode #btnTema {
-    background-color: #111827;
-    color: white;
+.carrito-resumen {
+    border-top: 1px solid #00D9FF;
+    padding-top: 15px;
+    margin-top: 10px;
 }
 
-body.light-mode #btnTema:hover {
-    background-color: #1F2937;
+#cerrar-carrito {
+    width: 100%;
+    margin-top: 15px;
+
+    padding: 14px;
+
+    border: none;
+
+    background: #00D9FF;
+
+    color: #000;
+
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
 }
 
-body.light-mode::-webkit-scrollbar-track {
-    background: #E5E7EB;
-}
-
-body.light-mode::-webkit-scrollbar-thumb {
+#cerrar-carrito:hover {
     background: #00B8D4;
+    transform: scale(1.05);
 }
 
-/* HERO SIEMPRE CLARO */
-
-body.light-mode .hero-content h2,
-body.light-mode .hero-content p,
-body.light-mode .hero-catalogo .hero-content h2,
-body.light-mode .hero-catalogo .hero-content p {
-    color: #FFFFFF !important;
+/* OCULTAR */
+.oculto {
+    display: none;
 }
 
-body.light-mode .overlay {
-    background: rgba(0, 0, 0, 0.60);
-}
-
-/* RESPONSIVE */
+/* =========================
+   MEDIA QUERY (ARREGLADO)
+========================= */
 
 @media(max-width: 1100px) {
-
     .catalogo-layout {
         flex-direction: column;
     }
 
     .sidebar {
         width: 100%;
-
         position: relative;
         top: 0;
     }
@@ -630,25 +764,8 @@ body.light-mode .overlay {
 
     .header {
         flex-direction: column;
-
         gap: 20px;
-
         padding: 20px;
-    }
-
-    .nav-links {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .hero {
-        height: auto;
-        padding: 120px 0;
-    }
-
-    .hero-catalogo {
-        height: auto;
-        padding: 100px 0;
     }
 
     .hero-content h2 {
@@ -675,28 +792,6 @@ body.light-mode .overlay {
         padding: 60px 6%;
     }
 
-    .catalogo-layout {
-        padding: 60px 6%;
-    }
-
-    .logo-text {
-        font-size: 24px;
-    }
-
-    .logo-text i {
-        font-size: 28px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-
-    .hero-content {
-        width: 95%;
-    }
-
     .hero-content h2 {
         font-size: 32px;
     }
@@ -709,12 +804,7 @@ body.light-mode .overlay {
         font-size: 32px;
     }
 
-    .producto img {
-        height: 220px;
-    }
-
-    #btnTema {
-        width: 100%;
-        justify-content: center;
+    .formulario-contacto {
+        padding: 25px;
     }
 }
