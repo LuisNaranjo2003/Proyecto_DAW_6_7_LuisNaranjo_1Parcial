@@ -1,16 +1,8 @@
-/* =========================
-   RESET
-========================= */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* =========================
-   VARIABLES TEMA
-========================= */
 
 :root {
     --bg: #0B1120;
@@ -26,8 +18,6 @@
     --border: #00D9FF;
 }
 
-/* TEMA CLARO */
-
 body.light-mode {
     --bg: #F3F4F6;
     --bg-card: #FFFFFF;
@@ -42,10 +32,6 @@ body.light-mode {
     --border: #0099CC;
 }
 
-/* =========================
-   BODY
-========================= */
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--bg);
@@ -54,10 +40,6 @@ body {
     overflow-x: hidden;
     transition: 0.3s;
 }
-
-/* =========================
-   SCROLL
-========================= */
 
 body::-webkit-scrollbar {
     width: 10px;
@@ -75,10 +57,6 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background: var(--primary-hover);
 }
-
-/* =========================
-   HEADER
-========================= */
 
 .header {
     width: 100%;
@@ -129,10 +107,6 @@ body::-webkit-scrollbar-thumb:hover {
     color: var(--primary);
 }
 
-/* =========================
-   BOTON TEMA
-========================= */
-
 #btnTema {
     background-color: var(--primary);
     color: #000;
@@ -159,10 +133,6 @@ body::-webkit-scrollbar-thumb:hover {
     background-color: var(--primary-hover);
     transform: scale(1.05);
 }
-
-/* =========================
-   HERO
-========================= */
 
 .hero {
     width: 100%;
@@ -205,10 +175,6 @@ body::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.65);
 }
 
-/* =========================
-   HERO TEXTO
-========================= */
-
 .hero-content {
     position: relative;
     z-index: 2;
@@ -237,10 +203,6 @@ body::-webkit-scrollbar-thumb:hover {
     max-width: 850px;
     margin: auto;
 }
-
-/* =========================
-   BOTONES
-========================= */
 
 .btn,
 .btn-producto {
@@ -271,10 +233,6 @@ body::-webkit-scrollbar-thumb:hover {
     transform: scale(1.05);
 }
 
-/* =========================
-   SECCIONES
-========================= */
-
 section {
     padding: 80px 8%;
 }
@@ -288,10 +246,6 @@ section {
 
     margin-bottom: 50px;
 }
-
-/* =========================
-   CATALOGO
-========================= */
 
 .catalogo-layout {
     display: flex;
@@ -358,10 +312,6 @@ section {
     padding: 0;
 }
 
-/* =========================
-   PRODUCTOS
-========================= */
-
 .contenedor-productos {
     display: grid;
 
@@ -415,10 +365,6 @@ section {
 
     margin: 15px 0 25px;
 }
-
-/* =========================
-   DETALLE PRODUCTO
-========================= */
 
 .detalle-producto {
     display: flex;
@@ -492,10 +438,6 @@ section {
     transition: 0.3s;
 }
 
-/* =========================
-   NOTICIAS
-========================= */
-
 .contenedor-noticias {
     display: grid;
 
@@ -547,10 +489,6 @@ section {
     color: var(--text-soft);
 }
 
-/* =========================
-   MISION
-========================= */
-
 .contenido-mision {
     display: flex;
     align-items: center;
@@ -587,10 +525,6 @@ section {
 .imagen-mision img:hover {
     transform: scale(1.03);
 }
-
-/* =========================
-   FORMULARIO
-========================= */
 
 .formulario-contacto {
     max-width: 750px;
@@ -652,10 +586,6 @@ section {
     resize: vertical;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
 .footer {
     background-color: var(--bg-card);
 
@@ -665,10 +595,6 @@ section {
 
     border-top: 2px solid var(--border);
 }
-
-/* =========================
-   CARRITO
-========================= */
 
 .acciones-header {
     display: flex;
@@ -725,10 +651,6 @@ section {
     top: -8px;
     right: -10px;
 }
-
-/* =========================
-   MODAL
-========================= */
 
 .modal-carrito {
     position: fixed;
@@ -818,17 +740,10 @@ section {
     transform: scale(1.05);
 }
 
-/* =========================
-   OCULTAR
-========================= */
-
 .oculto {
     display: none;
 }
 
-/* =========================
-   MEDIA QUERY
-========================= */
 
 @media(max-width: 1100px) {
 
